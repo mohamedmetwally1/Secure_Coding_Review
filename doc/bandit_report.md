@@ -1,8 +1,4 @@
-Here’s how the **bandit_report.txt** would look based on the information you provided. It includes the detected issue, severity, confidence level, and other relevant details.
-
----
-
-### **`bandit_report.txt`**
+### **`bandit_report.md`**
 
 ```
 [main]    INFO    profile include tests: None
@@ -87,6 +83,3 @@ cursor.execute(query, (username, password))
 
 In this fix, the query is parameterized, and the user input is safely handled, preventing SQL injection.
 
----
-
-This **bandit_report.txt** should be saved as a part of your project documentation, so anyone reviewing the code can see what vulnerabilities were found and what changes are recommended.
