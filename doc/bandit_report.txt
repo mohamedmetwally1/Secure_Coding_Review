@@ -1,0 +1,39 @@
+[main]  INFO    profile include tests: None
+[main]  INFO    profile exclude tests: None
+[main]  INFO    cli include tests: None
+[main]  INFO    cli exclude tests: None
+[main]  INFO    running on Python 3.11.2
+Run started:2024-11-09 22:32:05.472728
+Files in scope (1):
+        ./Desktop/example.py (score: {SEVERITY: 5, CONFIDENCE: 3})
+Files excluded (0):
+
+Test results:                                                                
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.                                         
+   Severity: Medium   Confidence: Low                                        
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)              
+   More Info: https://bandit.readthedocs.io/en/1.7.10/plugins/b608_hardcoded_sql_expressions.html                                                         
+   Location: ./Desktop/example.py:7:12                                       
+6           
+7           query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
+8           cursor.execute(query)
+
+--------------------------------------------------
+
+Code scanned:                                                                
+        Total lines of code: 9
+        Total lines skipped (#nosec): 0
+
+Run metrics:                                                                 
+        Total issues (by severity):
+                Undefined: 0
+                Low: 0
+                Medium: 1
+                High: 0
+        Total issues (by confidence):
+                Undefined: 0
+                Low: 1
+                Medium: 0
+                High: 0
+Files skipped (0):
+                                                                             
